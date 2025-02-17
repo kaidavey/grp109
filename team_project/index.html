@@ -6,8 +6,25 @@
   <meta name="description" content="Login to the Bellevue College Accepted Student Portal.">
   <title>Login</title>
   <link rel="stylesheet" href="css/login.css" type="text/css">
+  <link rel="stylesheet" href="https://fontlibrary.org/en//face/roboto" type="text/css"/>
 </head>
 <body>
-
+<div class="spacingPanel"></div>
+<div class="floatingPanel">
+  <img id="logo" src="images/bc-logo.png" alt="Bellevue College Logo">
+  <h1>We're Glad You're Here!</h1>
+  <p id="welcomeMsg">
+    Please log in to access the Bellevue College Accepted Student Portal. Enter your email and password below. Check your email for a temporary pin if it is your first time logging in.
+  </p>
+  <form id="login" method="post" action="home.html">
+    <input id="email" type="email" placeholder="Email"><br><br>
+    <input id="password" type="password" placeholder="Password"><br><br>
+    <input id="submit" type="submit" value="Log In"><br>
+  </form>
+  <p id="forgotPass">Forgot your password? Click <a href="">here</a>.</p>
+  <hr>
+  <p id="helpPage">Visit our help page <a href="">here</a>.</p>
+  <p id="credits">Copyright &copy; 2025.</p>
+</div>
 </body>
 </html>
