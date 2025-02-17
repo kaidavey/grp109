@@ -48,7 +48,7 @@ h1 {
     font-family: 'RobotoSemiBold', sans-serif;
 }
 
-#email, #password {
+#name, #email {
     width: 95%;
     height: 40px;
     background-color: #a7a9ac;
@@ -57,7 +57,7 @@ h1 {
     padding: 0 2.5%;
 }
 
-#email::placeholder, #password::placeholder {
+#name::placeholder, #email::placeholder {
     color: rgba(0, 0, 0, 0.50);
 }
 
