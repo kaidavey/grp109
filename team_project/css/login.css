@@ -1,3 +1,4 @@
+/* KAI D: CSS FOR LOGIN PAGE */
 html {
     width: 100%;
     height: 100%;
@@ -5,6 +6,7 @@ html {
     margin: 0;
 }
 
+/* Add Background, Center Content, Control Font */
 body {
     font-family: 'RobotoRegular', sans-serif;
     display: flex;
@@ -22,6 +24,7 @@ body {
     background-clip: padding-box;
 }
 
+/* Formatting for Spacer Panel and Transparent Floating Panel */
 .spacingPanel {
     height: 10%;
     padding: 0;
@@ -31,37 +34,45 @@ body {
 .floatingPanel {
     width: 40%;
     height: 90%;
-    background-color: rgba(217, 217, 217, 0.70);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 30px 30px 0 0;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
     padding: 3%;
     margin: 0 auto;
 }
 
+/* Added BC Logo Image to top of panel */
 #logo {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
+    margin-bottom: 10px;
 }
 
+/* Styling for Welcome Message */
 h1 {
     font-family: 'RobotoSemiBold', sans-serif;
+    color: #333;
 }
 
+/* Formatting for Input Text Fields */
 #username, #useremail {
     width: 95%;
     height: 40px;
-    background-color: #a7a9ac;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: black;
     border: none;
     padding: 0 2.5%;
 }
 
+/* Styling for Placeholder Text inside Input Fields */
 #name::placeholder, #email::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
 
+/* Styling for Submit Button */
 #submit {
     position: relative;
     left: 50%;
@@ -74,10 +85,12 @@ h1 {
     border: none;
 }
 
+/* Styling for Submit Button when clicked */
 #submit:active {
     background-color: #0d7fef;
 }
 
+/* Styling for Link to Iteration Page */
 #linktoI {
     text-align: center;
 }
