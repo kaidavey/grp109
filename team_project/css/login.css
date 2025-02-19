@@ -49,7 +49,7 @@ h1 {
     font-family: 'RobotoSemiBold', sans-serif;
 }
 
-#name, #email {
+#username, #useremail {
     width: 95%;
     height: 40px;
     background-color: #a7a9ac;

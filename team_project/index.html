@@ -7,22 +7,20 @@
   <title>Login</title>
   <link rel="stylesheet" href="css/login.css" type="text/css">
   <link rel="stylesheet" href="https://fontlibrary.org/en//face/roboto" type="text/css"/>
+  <script src="scripts/userInput.js"></script>
 </head>
 <body>
 <div class="spacingPanel"></div>
 <div class="floatingPanel">
   <img id="logo" src="images/bc-logo.png" alt="Bellevue College Logo">
-  <h1>We're Glad You're Here!</h1>
+  <h1 id="headerMsg">We're Glad You're Here!</h1>
   <p id="welcomeMsg">
-    Please log in to access the Bellevue College Accepted Student Portal. Enter your name and email below.
+    Please log in to access the Bellevue College Accepted Student Portal. Enter your full name and email below.
   </p>
-  <form id="login">
-    <input id="name" type="text" aria-label="Name" placeholder="Name"><br><br>
-    <input id="email" type="email" aria-label="Email" placeholder="Email"><br><br>
-    <button id="submit" onclick="/*function(
-      document.getElementById('name').value,
-      document.getElementById('email').value
-     )*/">Log In</button><br><br>
+  <form id="form">
+    <input type="text" id="username" name="uname" aria-label="Name" placeholder="Full Name"><br><br>
+    <input type="email" id="useremail" name="uemail" aria-label="Email" placeholder="Email"><br><br>
+    <button type="button" id="submit" onclick="getUserInputs()">Log In</button><br><br>
   </form>
   <hr>
   <p id="helpPage">Visit our help page <a href="https://www.bellevuecollege.edu/admissions-aid/request-information/">here</a>.</p>
