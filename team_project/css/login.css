@@ -77,3 +77,7 @@ h1 {
 #submit:active {
     background-color: #0d7fef;
 }
+
+#linktoI {
+    text-align: center;
+}
