@@ -2,7 +2,7 @@ function newlink(){
     //Create a element
     let a = document.createElement('a');
     //Create a text node
-    let link = document.createTextNode("Clink here to be directed to the iteration page");
+    let link = document.createTextNode("Click here to be directed to the iteration page.");
     //Append the text node to link element
     a.appendChild(link);
     //Title of link

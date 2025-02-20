@@ -7,5 +7,5 @@ function getUserInputs() {
     //Change H1 message to include username
     document.getElementById("headerMsg").innerHTML = "We're Glad You're Here, " + username + "!"
     //Change welcome message and include username + useremail
-    document.getElementById("welcomeMsg").innerHTML = "Congratulations and welcome to Bellevue College, " + username + "! Your email is " + useremail + ", so remember it because its important!";
+    document.getElementById("welcomeMsg").innerHTML = "Congratulations and welcome to Bellevue College, " + username + "! Your email is " + useremail + ", so remember it because it's important!";
   }
