@@ -73,20 +73,24 @@ h1 {
 
 /* Styling for Submit Button */
 #submit {
+    display: block;
+    margin-top: 4%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 25%;
     height: 35px;
-    background-color: #003d79;
-    border-radius: 10px;
+    background-color: #0055A4;
+    border-radius: 5px;
     color: white;
     border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Styling for Submit Button when clicked */
-#submit:active {
-    background-color: #0d7fef;
+/* Styling for Submit Button when hovering */
+#submit:hover {
+    background-color: #003366;
 }
 
 /* Div for Next Page and Error Message */
@@ -98,17 +102,24 @@ h1 {
 /* Next Page Button */
 #nextPage {
     display: none;
-    margin: 0 auto;
+    margin: 4% auto;
     width: 25%;
     height: 35px;
-    background-color: #2087ed;
-    border-radius: 10px;
+    background-color: #0055A4;
+    border-radius: 5px;
     color: white;
     border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Styling for Submit Button when hovering */
+#nextPage:hover {
+    background-color: #003366;
 }
 
 /* Remove Button Text Underline */
-a {
+#next {
     text-decoration: none;
 }
 

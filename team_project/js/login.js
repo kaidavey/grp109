@@ -7,8 +7,11 @@ function getUserInputs() {
     var errorMsg = document.getElementById("error");
     // Store next page button
     var nextPageButton = document.getElementById("nextPage");
+    // Store the submit button
+    var loginButton = document.getElementById("submit");
 
-    // Reset all messages on page
+    // Reset all elements on page
+    loginButton.style.display = "block";
     document.getElementById("headerMsg").innerHTML = "We're Glad You're Here!";
     document.getElementById("welcomeMsg").innerHTML = "Please log in to access the Bellevue College Accepted Student Portal. Enter your full name and email below.";
     errorMsg.textContent = "";
@@ -23,8 +26,10 @@ function getUserInputs() {
         document.getElementById("headerMsg").innerHTML = "We're Glad You're Here, " + username + "!";
         //Change welcome message and include username + useremail
         document.getElementById("welcomeMsg").innerHTML = "Congratulations and welcome to Bellevue College, " + username + "! Your email is " + useremail + ", so remember it because it's important!";
+        loginButton.style.display = "none";
         nextPageButton.style.display = "block";
     } else {
+        loginButton.style.display = "block";
         nextPageButton.style.display = "none";
         console.log("User's name or email was invalid.");
         errorMsg.textContent = "Please enter a valid name and email.";
