@@ -8,7 +8,7 @@ function newlink(){
     //Title of link
     a.title = "Iteration link";
     //Link to iteration page
-    a.href = "../iteration.html";
+    a.href = "iteration.html";
     //Append the a element to the body (the div after form element)
     document.getElementById("linktoI").appendChild(a);
   }
