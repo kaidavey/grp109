@@ -7,8 +7,6 @@
   <title>Login</title>
   <link rel="stylesheet" href="css/login.css" type="text/css">
   <link rel="stylesheet" href="https://fontlibrary.org/en//face/roboto" type="text/css"/>
-  <script src="scripts/userInput.js"></script>
-  <script src="scripts/iterationLink.js"></script>
 </head>
 <body>
 <!-- Invisible panel used for spacing -->
@@ -24,12 +22,16 @@
   <form id="form">
     <input type="text" id="username" name="uname" aria-label="Name" placeholder="Full Name"><br><br>
     <input type="email" id="useremail" name="uemail" aria-label="Email" placeholder="Email"><br><br>
-    <button type="button" id="submit" onclick="getUserInputs(), newlink()">Log In</button><br><br>
+    <button type="button" id="submit" onclick="getUserInputs()">Log In</button><br>
   </form>
-  <div id="linktoI"></div>
+  <div id="result">
+    <p id="error"></p>
+    <a href="iteration.html" target="_blank"><button id="nextPage">Next Page</button></a>
+  </div>
   <hr>
   <p id="helpPage">Visit our help page <a href="https://www.bellevuecollege.edu/admissions-aid/request-information/">here</a>.</p>
   <p id="credits">Copyright &copy; 2025.</p>
 </div>
+<script src="js/login.js"></script>
 </body>
 </html>

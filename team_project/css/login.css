@@ -89,7 +89,31 @@ h1 {
     background-color: #0d7fef;
 }
 
-/* Styling for Link to Iteration Page */
-#linktoI {
+/* Div for Next Page and Error Message */
+#result {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Next Page Button */
+#nextPage {
+    display: none;
+    margin: 0 auto;
+    width: 25%;
+    height: 35px;
+    background-color: #2087ed;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+/* Remove Button Text Underline */
+a {
+    text-decoration: none;
+}
+
+/* Error Message Styling */
+#error {
     text-align: center;
+    color: red;
 }
