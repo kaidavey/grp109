@@ -1,3 +1,7 @@
+/*  Author: James Kim
+    Date: 2/21/25
+    Description: Basic script to store user input and change messages to include user input.
+    */
 function getUserInputs() { 
     // Store username input
     var username = document.getElementById("username").value
