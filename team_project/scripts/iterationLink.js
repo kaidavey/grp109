@@ -1,3 +1,7 @@
+/*  Author: James Kim
+    Date: 2/21/25    
+    Description: Basic script which shows the iteration page link only after user input
+*/
 function newlink(){
     //Create a element
     let a = document.createElement('a');
