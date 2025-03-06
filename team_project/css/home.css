@@ -33,22 +33,51 @@ footer {
 
 /* UPPER SECTION FOOTER STYLING by Kai D */
 
+/* Font Styling for Subtitles and Subtext */
 .subtitle {
     font-size: 14pt;
     color: white;
 }
 .subtext {
+    width: max-content;
     font-size: 11pt;
     color: #0081FF;
+}
+.subtext:hover {
+    color: white;
+}
+/* Special Font Styling for Location and Phone */
+.contact {
+    width: max-content;
+    padding-bottom: 4px;
+    margin: 0;
+    font-size: 11pt;
+    color: white;
+    line-height: 20px;
 }
 /* Links Divs Formatting */
 #financials, #campus, #help {
     float: left;
-    width: 14%;
+    width: 12%;
     padding-top: 1%;
 }
 #financials {
     padding-left: 2%;
+}
+#contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 14px;
+    column-gap: 8px;
+    float: left;
+    width: 16%;
+    padding-top: 2%;
+}
+.icon {
+    display: block;
+    width: 20px;
+    height: 20px;
 }
 /* Newsletter Div Formatting */
 #newsletter {
