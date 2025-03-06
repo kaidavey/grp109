@@ -18,21 +18,38 @@ footer {
     width: 100%;
 }
 /* Upper section of footer div */
-#links {
+#upper {
     width: 100%;
     height: 200px;
     background-color: #002d65;
 }
 /* Lower section of footer div */
-#connect {
+#lower {
     width: 100%;
     height: 100px;
     background-color: white;
 }
 
 
-/* LINKS SECTION STYLING by Kai D */
+/* UPPER SECTION FOOTER STYLING by Kai D */
 
+.subtitle {
+    font-size: 14pt;
+    color: white;
+}
+.subtext {
+    font-size: 11pt;
+    color: #0081FF;
+}
+/* Links Divs Formatting */
+#financials, #campus, #help {
+    float: left;
+    width: 14%;
+    padding-top: 1%;
+}
+#financials {
+    padding-left: 2%;
+}
 /* Newsletter Div Formatting */
 #newsletter {
     display: flex;
@@ -43,10 +60,6 @@ footer {
 }
 form {
     width: 100%;
-}
-#news_title {
-    font-size: 16pt;
-    color: white;
 }
 /* Formatting for Email Text Field */
 #email {
@@ -79,7 +92,7 @@ form {
 }
 
 
-/* CONNECT SECTION STYLING by Kai D */
+/* LOWER SECTION FOOTER STYLING by Kai D */
 
 /* Footer Logo Styling */
 #footer-logo {
