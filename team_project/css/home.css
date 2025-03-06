@@ -35,20 +35,20 @@ footer {
     display: flex;
     align-items: center;
     float: right;
-    width: 30%;
+    width: 40%;
     height: 100%;
 }
 form {
     width: 100%;
 }
 #news_title {
+    font-size: 16pt;
     color: white;
 }
 /* Formatting for Email Text Field */
 #email {
     width: 80%;
     height: 40px;
-    margin-right: 20%;
     background: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: black;
@@ -64,7 +64,7 @@ form {
 #submit {
     width: 22%;
     height: 30px;
-    background-color: #0055A4;
+    background-color: #0081FF;
     border-radius: 5px;
     color: white;
     border: none;
@@ -72,7 +72,7 @@ form {
     transition: 0.3s;
 }
 #submit:hover {
-    background-color: #003366;
+    background-color: #0055A4;
 }
 
 
@@ -83,4 +83,25 @@ form {
     float: left;
     width: 266px;
     margin:  18px;
+}
+/* Icon Div Formatting */
+#socials {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+/* Social Media Logo Styling */
+.icons {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+#last_icon {
+    margin-right: 0;
+}
+#credits {
+    position: absolute;
+    right: 20px;
+    margin: 10px 0;
+    font-size: 9pt;
 }
