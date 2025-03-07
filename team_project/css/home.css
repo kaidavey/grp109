@@ -4,6 +4,13 @@ body {
     margin: 0;
     font-family: 'RobotoRegular', sans-serif;
 }
+.subtitle {
+    padding: 25px;
+    margin: 0;
+}
+#faq {
+    padding-bottom: 40px;
+}
 
 /* FREQUENTLY ASKED QUESTIONS STYLING by Kai D */
 /* Dropdown Button Styling */
@@ -59,16 +66,16 @@ footer {
 
 /* UPPER SECTION FOOTER STYLING by Kai D */
 /* Font Styling for Subtitles and Subtext */
-.subtitle {
+.footer-subtitle {
     font-size: 14pt;
     color: white;
 }
-.subtext {
+.footer-subtext {
     width: max-content;
     font-size: 11pt;
     color: #0081FF;
 }
-.subtext:hover {
+.footer-subtext:hover {
     color: white;
 }
 /* Special Font Styling for Location and Phone */
