@@ -1,0 +1,85 @@
+/* 
+    Author: Katherine L
+    Date: 03/07/25
+    Description: This CSS file styles the resources page, keeping consistency with Bellevue College's theme.
+*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'RobotoRegular', sans-serif;
+    background-image: url('../images/login-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+/* Main Content Box */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 50px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Bulldog Logo */
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Page Title */
+h1 {
+    font-size: 24px;
+    color: #00274C;
+    font-weight: bold;
+}
+
+/* Links Section */
+.links-section {
+    margin-top: 20px;
+}
+
+.links-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.links-section a {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #0081FF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links-section a:hover {
+    color: #0055A4;
+}
+
+/* Embedded PDF Styling */
+.pdf-container {
+    margin-top: 20px;
+}
+
+embed {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 400px;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
