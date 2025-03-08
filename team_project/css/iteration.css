@@ -6,6 +6,7 @@
 
 /* General Page Styling */
 body {
+    padding-top: 60px;
     font-family: Arial, sans-serif;
     background: url('../images/login-background.jpg') no-repeat center center fixed;
     background-size: cover;
