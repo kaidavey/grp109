@@ -4,34 +4,50 @@
     Description: This CSS styles the navigation bar across all pages.
 */
 
-/* Navigation Bar */
+/* Full-width Navbar Fix */
 nav {
     background-color: #00274C; /* Bellevue College Dark Blue */
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
+    position: fixed;
+    width: 100vw; /* Ensure navbar spans the full width */
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
+/* Remove default list styling */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
+/* Style navigation items */
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
+/* Style navigation links */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 10px 15px;
     border-radius: 5px;
     transition: background 0.3s;
 }
 
+/* Hover effect for navigation links */
 nav ul li a:hover {
-    background-color: #0081FF; /* Hover Effect */
+    background-color: #0081FF; /* Bright blue hover effect */
+}
+
+/* Fix for navbar overlapping content */
+body {
+    padding-top: 60px; /* Ensures content is not hidden under navbar */
 }
