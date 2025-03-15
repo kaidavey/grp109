@@ -95,8 +95,8 @@ footer {
 
 /* Carousel Container */
 .carousel-container {
-  width: 600px; 
-  height: 400px; 
+  width: 500px; 
+  height: 300px; 
 }
 
 .carousel {
@@ -110,7 +110,6 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: contain;  
-  flex: 0 0 100%;
   border: 2px solid red; 
 }
 
