@@ -104,11 +104,10 @@ footer {
 }
 
 .carousel img {
-    width: 200px; 
-    height: 200px; 
+    width: 350px; 
+    height: 350px; 
     object-fit: cover; 
     border-radius: 10px; 
-}
 
 /* Carousel Buttons Styling */
 .carousel-btn {
@@ -135,12 +134,13 @@ footer {
     right: -40px;
 }
 
-/* Progress Bar */
+/* Adjusted Progress Bar */
 .progress-bar {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px; 
     height: 5px;
     background: #ccc;
     z-index: 5;
