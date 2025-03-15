@@ -2,7 +2,7 @@
     Author: Katherine L
     Date: 03/07/25
     Description: Updated CSS file for the Resources page, including 
-    carousel improvements with adjusted button placement.
+    carousel improvements with adjusted button placement and blinking effect on links.
 */
 
 /* Global Styling */
@@ -63,6 +63,18 @@ h1 {
 
 .links-section a:hover {
     color: #0055A4;
+}
+
+/* Blinking effect when hovered for 2 seconds */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.links-section a:hover {
+    animation: blink 1s infinite;
+    animation-delay: 2s; /* Start blinking after 2 seconds */
 }
 
 /* Embedded PDF Styling */
