@@ -95,27 +95,19 @@ footer {
 
 /* Carousel Container */
 .carousel-container {
-  position: relative;
-  width: 80%;
-  max-width: 600px;
-  margin: 20px auto;
-  border: 2px solid #00274C;
-  overflow: hidden;
-  text-align: center;
+  width: 600px;
+  height: 400px;
 }
 
 .carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
   width: 700%;
-  height: auto;
+  height: 100%;
 }
 
 .carousel img {
   width: 100%;
-  height: auto;
-  max-height: 300px; 
-  object-fit: contain; 
+  height: 100%;
+  object-fit: contain;
   flex: 0 0 100%;
 }
 
