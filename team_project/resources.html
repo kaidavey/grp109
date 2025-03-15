@@ -4,34 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
-    <link rel="stylesheet" href="css/resources.css"> 
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/resources.css">
+    <link rel="stylesheet" href="css/nav.css">
+
+    <!-- Author Notes -->
     <!-- 
     Author: Katherine L  
     Date: 03/07/25
-    Description: This page includes a dynamically loaded navigation bar, created by me.  
-    The navigation bar is styled using `nav.css` and is inserted into all pages using `nav.js`.  
-    This ensures consistency across the site.  
--->
-
-    <!-- Link to Navigation CSS -->
-    <link rel="stylesheet" href="css/nav.css">
-
-    <!-- Link to JavaScript  -->
-    <script src="scripts/nav.js" defer></script>
-
-    <!-- Navigation Bar  -->
-    <div id="nav-placeholder"></div>
-
-    <!-- 
-    Author: Katherine L
-    Date: 03/07/25
-    Description: This Resources page was created by Katherine to provide Bellevue College students 
-    with easy access to important documents, including the New Student Checklist and Campus Map. 
+    Description: This page includes a dynamically loaded navigation bar and a carousel with campus snapshots.  
     -->
+
+    <!-- Link to JavaScript -->
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/carousel.js" defer></script>
 
     <style>
         body {
-            background-image: url('images/login-background.jpg'); /* Bellevue College login background */
+            background-image: url('images/login-background.jpg'); 
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
@@ -79,12 +70,46 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Navigation Bar -->
+    <div id="nav-placeholder"></div>
 
     <div class="container">
         <img src="images/Bulldog.png" alt="Bulldog Logo" class="logo">
-        <h1>Resources</h1>
-        
+        <h1>Campus Snapshots</h1>
+
+        <!-- Author Notes -->
+        <!-- 
+        Author: Katherine L
+        Date: 03/14/25
+        Description: This image carousel was created to provide Bellevue College students 
+        with easy access to campus snapshots. It includes navigation buttons, auto-scrolling, and an elapsed time counter. 
+        -->
+
+        <!-- Image Carousel Section -->
+        <div class="carousel-container">
+            <button class="carousel-btn left-btn">◀</button>
+            <div class="carousel">
+                <img src="team_project/images/CampusImage1.png" alt="Campus Image 1">
+                <img src="team_project/images/CampusImage2.png" alt="Campus Image 2">
+                <img src="team_project/images/CampusImage3.png" alt="Campus Image 3">
+                <img src="team_project/images/CampusImage4.png" alt="Campus Image 4">
+                <img src="team_project/images/CampusImage5.png" alt="Campus Image 5">
+                <img src="team_project/images/CampusImage6.png" alt="Campus Image 6">
+                <img src="team_project/images/CampusImage7.png" alt="Campus Image 7">
+            </div>
+            <button class="carousel-btn right-btn">▶</button>
+            <div class="carousel-info">
+                <div class="carousel-counter">Image 1 of 7</div>
+                <div class="elapsed-time">Elapsed: 0s</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- PDF Section -->
         <div class="pdf-container">
             <h2>New Student Checklist</h2>
             <embed src="docs/New-Student-Checklist.pdf" />
@@ -95,6 +120,7 @@
             <embed src="docs/BCCampusMap.pdf" />
         </div>
 
+        <!-- Important Links -->
         <div class="links-section">
             <h2>Important Links</h2>
             <a href="https://www.bellevuecollege.edu/current-students/student-central/calendar/" target="_blank">
