@@ -5,110 +5,112 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-    /** Elements from HTML  **/
-    const carousel = document.querySelector(".carousel");
-    const images = document.querySelectorAll(".carousel img");
-    const counter = document.querySelector(".carousel-counter");
-    const elapsedTimeDisplay = document.querySelector(".elapsed-time");
-    const leftBtn = document.querySelector(".left-btn");
-    const rightBtn = document.querySelector(".right-btn");
-    const progressFill = document.querySelector(".progress-fill");
+    /*** Get elements from the HTML ***/
+    const carousel = document.querySelector(".carousel"); 
+    const images = document.querySelectorAll(".carousel img"); 
+    const counter = document.querySelector(".carousel-counter"); 
+    const elapsedTimeDisplay = document.querySelector(".elapsed-time"); 
+    const leftBtn = document.querySelector(".left-btn"); 
+    const rightBtn = document.querySelector(".right-btn"); 
+    const progressFill = document.querySelector(".progress-fill"); 
 
-    /** Carousel Variables **/
-    let index = 0;
-    let interval;
-    let elapsedTime = 0;
-    const totalImages = images.length;
+    /*** Set up important numbers ***/
+    let index = 0; 
+    let interval; 
+    let elapsedTime = 0; 
+    const totalImages = images.length; 
     
-    /** Load Sound Files **/
-    const soundRewind = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/rewind.mp3");
+    /*** Load the sound files ***/
+    const soundRewind = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/rewind.mp3"); 
     const soundAdvance = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/advance.mp3");
-
-    /** Update Carousel Position **/
+ 
+    /*** Move the carousel to the correct image ***/
     function updateCarousel() {
-        carousel.style.transform = `translateX(-${index * 100}%)`;
+        carousel.style.transform = `translateX(-${index * 100}%)`; 
         counter.innerText = `Image ${index + 1} of ${totalImages}`;
-        elapsedTime = 0; // Reset timer
+        elapsedTime = 0; // Reset the timer
         updateElapsedTime();
         resetProgressBar();
     }
 
-    /** Update Elapsed Time Display **/
+    /*** Update the elapsed time display ***/
     function updateElapsedTime() {
-        elapsedTimeDisplay.innerText = `Elapsed: ${elapsedTime}s`;
+        elapsedTimeDisplay.innerText = `Elapsed: ${elapsedTime}s`; 
     }
 
-    /** Start Auto-Scroll **/
+    /*** Start auto-scrolling every 3 seconds ***/
     function startAutoScroll() {
         interval = setInterval(() => {
-            elapsedTime++; // Increment timer
+            elapsedTime++; 
             updateElapsedTime();
-            if (elapsedTime >= 3) {
-                index = (index + 1) % totalImages;
+            if (elapsedTime >= 3) { 
+                index = (index + 1) % totalImages; 
                 updateCarousel();
             }
         }, 1000); // Update every second
         resetProgressBar();
     }
 
-    /** Reset Auto-Scroll When User Interacts With It **/
+    /*** Stop auto-scrolling and restart when user interacts ***/
     function resetScroll() {
-        clearInterval(interval);
-        elapsedTime = 0;
+        clearInterval(interval); 
+        elapsedTime = 0; 
         updateElapsedTime();
-        startAutoScroll();
+        startAutoScroll(); 
     }
 
-    /** Reset Progress Bar Animation **/
+    /*** Reset and restart the progress bar ***/
     function resetProgressBar() {
-        progressFill.style.transition = "none";
-        progressFill.style.width = "0%";
+        progressFill.style.transition = "none"; 
+        progressFill.style.width = "0%"; 
         setTimeout(() => {
-            progressFill.style.transition = "width 3s linear";
-            progressFill.style.width = "100%";
+            progressFill.style.transition = "width 3s linear"; 
+            progressFill.style.width = "100%"; 
         }, 10);
     }
 
-    /** Left Button Click Event (Rewind) **/
+    /*** Move backward when clicking the left button ***/
     leftBtn.addEventListener("click", () => {
-        index = index > 0 ? index - 1 : totalImages - 1;
+        index = index > 0 ? index - 1 : totalImages - 1; 
         soundRewind.currentTime = 0;
-        soundRewind.play();
-        updateCarousel();
-        resetScroll();
+        soundRewind.play(); 
+        updateCarousel(); 
+        resetScroll(); 
     });
 
-    /** Right Button Click Event (Advance) **/
+    /*** Move forward when clicking the right button ***/
     rightBtn.addEventListener("click", () => {
-        index = (index + 1) % totalImages;
-        soundAdvance.currentTime = 0;
-        soundAdvance.play();
-        updateCarousel();
-        resetScroll();
+        index = (index + 1) % totalImages; 
+        soundAdvance.currentTime = 0; 
+        soundAdvance.play(); 
+        updateCarousel(); 
+        resetScroll(); 
     });
 
-    /** Click Event on Images (Left or Right Side) **/
+    /*** Move images when clicking on the left or right side of an image ***/
     carousel.addEventListener("click", (e) => {
-        const clickX = e.clientX - carousel.getBoundingClientRect().left;
-        const halfWidth = carousel.offsetWidth / 2;
+        const clickX = e.clientX - carousel.getBoundingClientRect().left; 
+        const halfWidth = carousel.offsetWidth / 2; 
 
-        if (clickX < halfWidth) {
+        if (clickX < halfWidth) { 
+            // If clicked on the left side, move backward
             index = index > 0 ? index - 1 : totalImages - 1;
             soundRewind.currentTime = 0;
             soundRewind.play();
         } else {
+            // If clicked on the right side, move forward
             index = (index + 1) % totalImages;
             soundAdvance.currentTime = 0;
             soundAdvance.play();
         }
 
-        updateCarousel();
-        resetScroll();
+        updateCarousel(); // Move the images
+        resetScroll(); // Reset the auto-scroll timer
     });
 
-    /** Ensure Carousel Width Matches Image Count **/
-    carousel.style.width = `${totalImages * 100}%`;
+    /*** Make sure the carousel width matches the number of images ***/
+    carousel.style.width = `${totalImages * 100}%`; 
 
-    /** Start Auto-Scrolling on Page Load **/
+    /*** Start auto-scrolling when the page loads ***/
     startAutoScroll();
 });
