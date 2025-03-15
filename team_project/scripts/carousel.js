@@ -5,123 +5,94 @@
  */
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Define slides (update the src and text as needed)
-  const slides = [
-    {
-      src: "images/CampusImage1.png",
-      alt: "Campus Image 1",
-      counterText: "Image 1 of 7",
-      description: "A beautiful view of the campus at sunrise."
-    },
-    {
-      src: "images/CampusImage2.png",
-      alt: "Campus Image 2",
-      counterText: "Image 2 of 7",
-      description: "Students walking across campus in the morning light."
-    },
-    {
-      src: "images/CampusImage3.png",
-      alt: "Campus Image 3",
-      counterText: "Image 3 of 7",
-      description: "Modern campus architecture with sleek lines."
-    },
-    {
-      src: "images/CampusImage4.png",
-      alt: "Campus Image 4",
-      counterText: "Image 4 of 7",
-      description: "A panoramic view of the central campus area."
-    },
-    {
-      src: "images/CampusImage5.png",
-      alt: "Campus Image 5",
-      counterText: "Image 5 of 7",
-      description: "Campus in the evening with vibrant lighting."
-    },
-    {
-      src: "images/CampusImage6.png",
-      alt: "Campus Image 6",
-      counterText: "Image 6 of 7",
-      description: "Lush greenery and tranquil spots on campus."
-    },
-    {
-      src: "images/CampusImage7.png",
-      alt: "Campus Image 7",
-      counterText: "Image 7 of 7",
-      description: "A dynamic shot of campus life during a busy day."
+    // Define images and sounds
+    const slides = [
+        "images/CampusImage1.png",
+        "images/CampusImage2.png",
+        "images/CampusImage3.png",
+        "images/CampusImage4.png",
+        "images/CampusImage5.png",
+        "images/CampusImage6.png",
+        "images/CampusImage7.png"
+    ];
+
+    let currentIndex = 0;
+    const cycleTime = 3; // Seconds per slide
+    let elapsed = cycleTime;
+    let timerInterval;
+
+    // Load sound effects
+    const rewindSound = new Audio("sounds/rewind.mp3");
+    const advanceSound = new Audio("sounds/advance.mp3");
+
+    // Get DOM elements
+    const carouselImage = document.getElementById("carousel-image");
+    const counterEl = document.querySelector(".carousel-counter");
+    const elapsedTimeEl = document.querySelector(".elapsed-time");
+    const progressFill = document.querySelector(".progress-fill");
+    const carouselContainer = document.querySelector(".carousel-container");
+
+    // Update displayed slide
+    function updateSlide() {
+        carouselImage.src = slides[currentIndex];
+        counterEl.textContent = `Image ${currentIndex + 1} of ${slides.length}`;
+        elapsed = cycleTime;
+        updateElapsedTime();
+        resetProgressBar();
     }
-  ];
 
-  let currentIndex = 0;
-  const cycleTime = 4; // seconds per slide
-  let elapsed = cycleTime;
-  let timerInterval;
+    function updateElapsedTime() {
+        elapsedTimeEl.textContent = `Elapsed: ${elapsed}s`;
+    }
 
-  // Get DOM elements
-  const carouselImage = document.getElementById("carousel-image");
-  const counterEl = document.getElementById("carousel-counter");
-  const elapsedTimeEl = document.getElementById("elapsed-time");
-  const prevBtn = document.getElementById("prev-btn");
-  const nextBtn = document.getElementById("next-btn");
-  const progressFill = document.querySelector(".progress-fill");
+    function startTimer() {
+        clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+            elapsed--;
+            updateElapsedTime();
+            if (elapsed <= 0) {
+                nextSlide();
+            }
+        }, 1000);
+        resetProgressBar();
+    }
 
-  // Update slide content
-  function updateSlide() {
-    const slide = slides[currentIndex];
-    carouselImage.src = slide.src;
-    carouselImage.alt = slide.alt;
-    counterEl.innerHTML = `${slide.counterText}<br>${slide.description}`;
-    elapsed = cycleTime;
-    updateElapsedTime();
-    resetProgressBar();
-  }
+    function resetProgressBar() {
+        progressFill.style.transition = "none";
+        progressFill.style.width = "0%";
+        setTimeout(() => {
+            progressFill.style.transition = `width ${cycleTime}s linear`;
+            progressFill.style.width = "100%";
+        }, 10);
+    }
 
-  function updateElapsedTime() {
-    elapsedTimeEl.textContent = `Elapsed: ${elapsed}s`;
-  }
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        advanceSound.play();
+        updateSlide();
+        startTimer();
+    }
 
-  function startTimer() {
-    clearInterval(timerInterval);
-    timerInterval = setInterval(() => {
-      elapsed--;
-      updateElapsedTime();
-      if (elapsed <= 0) {
-        nextSlide();
-      }
-    }, 1000);
-    resetProgressBar();
-  }
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        rewindSound.play();
+        updateSlide();
+        startTimer();
+    }
 
-  function resetProgressBar() {
-    progressFill.style.transition = "none";
-    progressFill.style.width = "0%";
-    setTimeout(() => {
-      progressFill.style.transition = `width ${cycleTime}s linear`;
-      progressFill.style.width = "100%";
-    }, 10);
-  }
+    // Click event to detect left or right side clicks
+    carouselContainer.addEventListener("click", (event) => {
+        const { left, width } = carouselContainer.getBoundingClientRect();
+        const clickX = event.clientX - left;
+        
+        if (clickX < width / 2) {
+            prevSlide(); // Click on left side
+        } else {
+            nextSlide(); // Click on right side
+        }
+    });
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
+    // Initialize
     updateSlide();
     startTimer();
-  }
-
-  function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlide();
-    startTimer();
-  }
-
-  // Button event listeners
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-  });
-
-  // Initialize the slideshow
-  updateSlide();
-  startTimer();
 });
