@@ -96,7 +96,7 @@ footer {
 /* Carousel Container */
 .carousel-container {
   position: relative;
-  width: 500px;      
+  width: 80%;      
   height: 300px;     
   margin: 20px auto;
   overflow: hidden;
@@ -108,14 +108,14 @@ footer {
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 700%; /* For 7 images total */
-  height: 100%;
+  width: 700%; 
+  
 }
 
 .carousel img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   flex: 0 0 100%; 
   border: 2px solid red; 
 }
