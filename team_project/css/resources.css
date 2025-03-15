@@ -107,18 +107,18 @@ footer {
 /* Carousel Track */
 .carousel {
   display: flex;
+  width: 700%;
   transition: transform 0.5s ease-in-out;
-  width: 700%; /* For 7 images total */
   height: 100%;
 }
 
 /* Carousel Images */
 .carousel img {
-  flex: 0 0 100%;          
+  flex: 0 0 100%;
   width: 100%;
   height: 100%;
-  object-fit: contain;    
-  border: 2px solid red;   
+  object-fit: contain; /* entire image, letterbox if ratio differs */
+  border: 2px solid red; 
 }
 /* Carousel Navigation Buttons */
 .carousel-btn {
