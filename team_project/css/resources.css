@@ -100,14 +100,16 @@ footer {
 }
 
 .carousel {
-  width: 700%;
-  height: 100%;
+  display: flex;
+  width: 700%; 
+  transition: transform 0.5s ease-in-out;
 }
 
 .carousel img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  flex: 0 0 100%; 
   border: 3px solid red; 
 }
 
