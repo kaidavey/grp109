@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
+    
+    <!-- CSS Links -->
     <link rel="stylesheet" href="css/resources.css"> 
-   <audio id="rewind-sound" src="sounds/rewind.mp3"></audio>
-   <audio id="advance-sound" src="sounds/advance.mp3"></audio>
+    <link rel="stylesheet" href="css/nav.css">
+
+    <!-- JavaScript Files -->
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/carousel.js" defer></script>
+</head>
+<body>
     <!-- 
     Author: Katherine L  
     Date: 03/07/25
@@ -30,83 +37,30 @@
     Description: This Resources page was created by Katherine to provide Bellevue College students 
     with easy access to important documents, including the New Student Checklist and Campus Map. 
     -->
-
-    <style>
-        body {
-            background-image: url('images/login-background.jpg'); /* Bellevue College login background */
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: #333;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.9);
-            margin: 50px auto;
-            padding: 30px;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .logo {
-            width: 150px;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 24px;
-            color: #00274C;
-            font-weight: bold;
-        }
-        .links-section a {
-            display: block;
-            margin: 10px 0;
-            font-size: 16px;
-            color: #0081FF;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .links-section a:hover {
-            color: #0055A4;
-        }
-        .pdf-container {
-            margin-top: 20px;
-        }
-        embed {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            height: 400px;
-        }
-    </style>
-</head>
-<body>
-
+  <!-- Image Carousel Section -->
     <div class="container">
         <img src="images/Bulldog.png" alt="Bulldog Logo" class="logo">
         <h1>Campus SnapShots</h1>
 
 <div class="carousel-container">
-    <button class="carousel-btn left-btn">◀</button>
-    <div class="carousel">
-        <img src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/images/CampusImage1.png" alt="Campus Image 1">
-        <img src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/images/CampusImage2.png" alt="Campus Image 2">
-        <img src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/images/CampusImage3.png" alt="Campus Image 3">
-        <img src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/images/CampusImage4.png" alt="Campus Image 4">
-        <img src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/images/CampusImage5.png" alt="Campus Image 5">
-        <img src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/images/CampusImage6.png" alt="Campus Image 6">
-        <img src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/images/CampusImage7.png" alt="Campus Image 7">
-    </div>
-    <button class="carousel-btn right-btn">▶</button>
-    <div class="carousel-counter">Image 1</div>
- <div class="progress-bar">
-        <div class="progress-fill"></div>
-</div>
+ <button id="prev-btn" class="carousel-btn left-btn">◀</button>
+            <div class="carousel">
+                <img id="carousel-image" src="images/CampusImage1.png" alt="Campus Image 1">
+            </div>
+            <button id="next-btn" class="carousel-btn right-btn">▶</button>
+            <div class="carousel-info">
+                <div id="carousel-counter" class="carousel-counter">Image 1 of 7</div>
+                <div id="elapsed-time" class="elapsed-time">Elapsed: 0s</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
 
 <!-- Link JavaScript file -->
 <script src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/scripts/carousel.js"></script>
         
+      <!-- PDF Section -->
         <div class="pdf-container">
             <h2>New Student Checklist</h2>
             <embed src="docs/New-Student-Checklist.pdf" />
@@ -117,6 +71,7 @@
             <embed src="docs/BCCampusMap.pdf" />
         </div>
 
+        <!-- Important Links -->
         <div class="links-section">
             <h2>Important Links</h2>
             <a href="https://www.bellevuecollege.edu/current-students/student-central/calendar/" target="_blank">
@@ -127,6 +82,5 @@
             </a>
         </div>
     </div>
-
 </body>
 </html>
