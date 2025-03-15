@@ -6,14 +6,14 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const slides = [
-        "images/CampusImage1.png",
-        "images/CampusImage2.png",
-        "images/CampusImage3.png",
-        "images/CampusImage4.png",
-        "images/CampusImage5.png",
-        "images/CampusImage6.png",
-        "images/CampusImage7.png"
-    ];
+    "https://kaidavey.github.io/grp109/team_project/images/CampusImage1.png",
+    "https://kaidavey.github.io/grp109/team_project/images/CampusImage2.png",
+    "https://kaidavey.github.io/grp109/team_project/images/CampusImage3.png",
+    "https://kaidavey.github.io/grp109/team_project/images/CampusImage4.png",
+    "https://kaidavey.github.io/grp109/team_project/images/CampusImage5.png",
+    "https://kaidavey.github.io/grp109/team_project/images/CampusImage6.png",
+    "https://kaidavey.github.io/grp109/team_project/images/CampusImage7.png"
+];
 
     let currentIndex = 0;
     const cycleTime = 3; // Seconds per slide
