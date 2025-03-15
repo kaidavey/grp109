@@ -2,7 +2,7 @@
     Author: Katherine L
     Date: 03/07/25
     Description: Updated CSS file for the Resources page, including 
-    carousel improvements with smaller images and styled buttons.
+    carousel improvements with adjusted button placement.
 */
 
 /* Global Styling */
@@ -86,64 +86,64 @@ footer {
     color: #666;
 }
 
-/*  Updated Carousel Styling */
+/* Updated Carousel Styling */
 .carousel-container {
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     max-width: 500px;
     margin: 0 auto;
 }
 
 .carousel {
-    max-width: 80%; 
+    max-width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
 }
 
 .carousel img {
-    width: 350px; 
-    height: 350px; 
-    object-fit: cover; 
-    border-radius: 10px; 
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-/* Carousel Buttons Styling */
+/* Adjusted Button Styling */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
 .carousel-btn {
-    background-color: #00274C; /* Dark blue background */
-    color: white; /* White text */
+    background-color: #00274C;
+    color: white;
     border: none;
     padding: 10px 15px;
     font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 50%; 
-    position: absolute;
+    border-radius: 50%;
 }
 
 .carousel-btn:hover {
-    background-color: #0055A4; /* Lighter blue on hover */
+    background-color: #0055A4;
 }
 
-.left-btn {
-    left: -40px;
+/* Move progress bar and elapsed time below image */
+.carousel-info {
+    margin-top: 10px;
+    text-align: center;
 }
 
-.right-btn {
-    right: -40px;
-}
-
-/* Adjusted Progress Bar */
 .progress-bar {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 350px; 
+    width: 350px;
     height: 5px;
     background: #ccc;
-    z-index: 5;
+    margin-top: 5px;
 }
 
 .progress-fill {
@@ -153,7 +153,8 @@ footer {
     transition: width 3s linear;
 }
 
-/* Hide elapsed time text */
 .elapsed-time {
-    display: none;
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
 }
