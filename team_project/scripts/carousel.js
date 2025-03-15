@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
 ];
 
     let currentIndex = 0;
-    const cycleTime = 3; // Seconds per slide
+    const cycleTime = 3; // Auto-scroll interval
     let elapsed = cycleTime;
     let timerInterval;
+    let isManualClick = false; // Flag to check manual interaction
 
     const rewindSound = new Audio("sounds/rewind.mp3");
     const advanceSound = new Audio("sounds/advance.mp3");
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
             elapsed--;
             updateElapsedTime();
             if (elapsed <= 0) {
+                isManualClick = false; // Reset flag so sounds don’t play
                 nextSlide();
             }
         }, 1000);
@@ -65,20 +67,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function nextSlide() {
         currentIndex = (currentIndex + 1) % slides.length;
-        advanceSound.play();
+        if (isManualClick) {
+            advanceSound.play();
+        }
         updateSlide();
         startTimer();
     }
 
     function prevSlide() {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        rewindSound.play();
+        if (isManualClick) {
+            rewindSound.play();
+        }
         updateSlide();
         startTimer();
     }
 
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
+    nextBtn.addEventListener("click", () => {
+        isManualClick = true;
+        nextSlide();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        isManualClick = true;
+        prevSlide();
+    });
 
     updateSlide();
     startTimer();
