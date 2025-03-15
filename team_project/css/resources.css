@@ -115,7 +115,7 @@ footer {
 .carousel img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   flex: 0 0 100%; 
   border: 2px solid red; 
 }
