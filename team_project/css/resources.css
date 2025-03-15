@@ -92,71 +92,70 @@ footer {
     Description: Styles the interactive image carousel, ensuring smooth scrolling and responsiveness.
 */
 
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".carousel");
+    const images = document.querySelectorAll(".carousel img");
+    const counter = document.querySelector(".carousel-counter");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+    const progressFill = document.querySelector(".progress-fill");
 
-/* Carousel Container */
-.carousel-container {
-  position: relative;      
-  width: 500px; 
-  height: 300px; 
-  margin: 20px auto;
-  overflow: hidden;        
-  border: 2px solid #00274C;
-  text-align: center;
-}
+    let index = 0;
+    let interval;
+    const totalImages = images.length;
+    
+    // Load sound files from GitHub raw URLs
+    const soundRewind = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/rewind.mp3");
+    const soundAdvance = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/advance.mp3");
 
-/* Carousel Track */
-.carousel {
-  display: flex;
-  width: 700%;
-  transition: transform 0.5s ease-in-out;
-  height: 100%;
-}
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+        counter.innerText = `Image ${index + 1}`;
+        resetProgressBar();
+    }
 
-/* Carousel Images */
-.carousel img {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* entire image, letterbox if ratio differs */
-  border: 2px solid red; 
-}
-/* Carousel Navigation Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 39, 76, 0.8);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 2;
-    transition: background 0.3s ease-in-out;
-}
+    function startAutoScroll() {
+        interval = setInterval(() => {
+            index = (index + 1) % totalImages;
+            updateCarousel();
+        }, 3000);
+        resetProgressBar();
+    }
 
-.left-btn {
-    left: 10px;
-}
+    function resetScroll() {
+        clearInterval(interval);
+        startAutoScroll();
+    }
 
-.right-btn {
-    right: 10px;
-}
+    function resetProgressBar() {
+        progressFill.style.transition = "none";
+        progressFill.style.width = "0%";
+        setTimeout(() => {
+            progressFill.style.transition = "width 3s linear";
+            progressFill.style.width = "100%";
+        }, 10);
+    }
 
-.carousel-btn:hover {
-    background: #0055A4;
-}
+    // Click Events for Buttons
+    leftBtn.addEventListener("click", () => {
+        index = index > 0 ? index - 1 : totalImages - 1;
+        soundRewind.currentTime = 0;
+        soundRewind.play();
+        updateCarousel();
+        resetScroll();
+    });
 
-/* Image Counter & Timer */
-.carousel-info {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #00274C;
-    background: rgba(255, 255, 255, 0.9);
-}
+    rightBtn.addEventListener("click", () => {
+        index = (index + 1) % totalImages;
+        soundAdvance.currentTime = 0;
+        soundAdvance.play();
+        updateCarousel();
+        resetScroll();
+    });
+
+    // Start auto-scrolling on page load
+    startAutoScroll();
+});
 
 /* Progress Bar */
 .progress-bar {
