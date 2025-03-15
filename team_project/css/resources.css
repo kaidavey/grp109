@@ -94,31 +94,32 @@ footer {
 
 /* Carousel Container */
 .carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 40px auto;
-    overflow: hidden;
-    border: 2px solid #00274C;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    background: white;
-    text-align: center;
+  position: relative;
+  width: 80%;          
+  max-width: 600px;    
+  height: 350px;       
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #00274C;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
 
-/* Carousel Track */
 .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    height: 400px; 
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 700%;        
+  height: 100%;       
 }
 
-/* Individual Images */
 .carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    flex: 0 0 100%; 
+  width: 100%;         
+  height: 100%;        
+  object-fit: cover;   
+  flex: 0 0 100%;
 }
 
 /* Carousel Navigation Buttons */
