@@ -1,14 +1,15 @@
 /* 
     Author: Katherine L
     Date: 03/07/25
-    Description: This CSS file styles the resources page, keeping consistency with Bellevue College's theme.
+    Description: This CSS file styles the Resources page, ensuring consistency with Bellevue College's theme.
 */
 
+/* Global Styling */
 body {
     padding: 0;
     margin: 0;
     font-family: 'RobotoRegular', sans-serif;
-    background-image: url('../images/login-background.jpg');
+    background-image: url('../images/login-background.jpg'); /* Bellevue College background */
     background-size: cover;
     background-position: center;
     color: #333;
@@ -82,4 +83,93 @@ footer {
     text-align: center;
     font-size: 12px;
     color: #666;
+}
+
+/*  Carousel Styling Section */
+/* 
+    Author: Katherine L
+    Date: 03/14/25
+    Description: Styles the interactive image carousel, ensuring smooth scrolling and responsiveness.
+*/
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    border: 2px solid #00274C;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    text-align: center;
+}
+
+/* Carousel Track */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 400px; 
+}
+
+/* Individual Images */
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 0 0 100%; 
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 39, 76, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2;
+    transition: background 0.3s ease-in-out;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: #0055A4;
+}
+
+/* Image Counter & Timer */
+.carousel-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00274C;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    position: relative;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #0055A4;
+    transition: width 3s linear;
 }
