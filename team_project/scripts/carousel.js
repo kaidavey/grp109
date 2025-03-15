@@ -5,7 +5,6 @@
  */
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Define images and sounds
     const slides = [
         "images/CampusImage1.png",
         "images/CampusImage2.png",
@@ -21,18 +20,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let elapsed = cycleTime;
     let timerInterval;
 
-    // Load sound effects
     const rewindSound = new Audio("sounds/rewind.mp3");
     const advanceSound = new Audio("sounds/advance.mp3");
 
-    // Get DOM elements
     const carouselImage = document.getElementById("carousel-image");
-    const counterEl = document.querySelector(".carousel-counter");
-    const elapsedTimeEl = document.querySelector(".elapsed-time");
+    const counterEl = document.getElementById("carousel-counter");
+    const elapsedTimeEl = document.getElementById("elapsed-time");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
     const progressFill = document.querySelector(".progress-fill");
-    const carouselContainer = document.querySelector(".carousel-container");
 
-    // Update displayed slide
     function updateSlide() {
         carouselImage.src = slides[currentIndex];
         counterEl.textContent = `Image ${currentIndex + 1} of ${slides.length}`;
@@ -80,19 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
         startTimer();
     }
 
-    // Click event to detect left or right side clicks
-    carouselContainer.addEventListener("click", (event) => {
-        const { left, width } = carouselContainer.getBoundingClientRect();
-        const clickX = event.clientX - left;
-        
-        if (clickX < width / 2) {
-            prevSlide(); // Click on left side
-        } else {
-            nextSlide(); // Click on right side
-        }
-    });
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
 
-    // Initialize
     updateSlide();
     startTimer();
 });
