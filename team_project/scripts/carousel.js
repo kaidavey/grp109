@@ -4,113 +4,124 @@
  * Description: This script controls an interactive image carousel with auto-scrolling, manual navigation with buttons and image clicks, and an elapsed time display.
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    /*** Get elements from the HTML ***/
-    const carousel = document.querySelector(".carousel"); 
-    const images = document.querySelectorAll(".carousel img"); 
-    const counter = document.querySelector(".carousel-counter"); 
-    const elapsedTimeDisplay = document.querySelector(".elapsed-time"); 
-    const leftBtn = document.querySelector(".left-btn"); 
-    const rightBtn = document.querySelector(".right-btn"); 
-    const progressFill = document.querySelector(".progress-fill"); 
-
-    /*** Set up important numbers ***/
-    let index = 0; 
-    let interval; 
-    let elapsedTime = 0; 
-    const totalImages = images.length; 
-    
-    /*** Load the sound files ***/
-    const soundRewind = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/rewind.mp3"); 
-    const soundAdvance = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/advance.mp3");
- 
-    /*** Move the carousel to the correct image ***/
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${index * 100}%)`; 
-        counter.innerText = `Image ${index + 1} of ${totalImages}`;
-        elapsedTime = 0; // Reset the timer
-        updateElapsedTime();
-        resetProgressBar();
+document.addEventListener("DOMContentLoaded", function() {
+  // Define slides (update the src and text as needed)
+  const slides = [
+    {
+      src: "images/CampusImage1.png",
+      alt: "Campus Image 1",
+      counterText: "Image 1 of 7",
+      description: "A beautiful view of the campus at sunrise."
+    },
+    {
+      src: "images/CampusImage2.png",
+      alt: "Campus Image 2",
+      counterText: "Image 2 of 7",
+      description: "Students walking across campus in the morning light."
+    },
+    {
+      src: "images/CampusImage3.png",
+      alt: "Campus Image 3",
+      counterText: "Image 3 of 7",
+      description: "Modern campus architecture with sleek lines."
+    },
+    {
+      src: "images/CampusImage4.png",
+      alt: "Campus Image 4",
+      counterText: "Image 4 of 7",
+      description: "A panoramic view of the central campus area."
+    },
+    {
+      src: "images/CampusImage5.png",
+      alt: "Campus Image 5",
+      counterText: "Image 5 of 7",
+      description: "Campus in the evening with vibrant lighting."
+    },
+    {
+      src: "images/CampusImage6.png",
+      alt: "Campus Image 6",
+      counterText: "Image 6 of 7",
+      description: "Lush greenery and tranquil spots on campus."
+    },
+    {
+      src: "images/CampusImage7.png",
+      alt: "Campus Image 7",
+      counterText: "Image 7 of 7",
+      description: "A dynamic shot of campus life during a busy day."
     }
+  ];
 
-    /*** Update the elapsed time display ***/
-    function updateElapsedTime() {
-        elapsedTimeDisplay.innerText = `Elapsed: ${elapsedTime}s`; 
-    }
+  let currentIndex = 0;
+  const cycleTime = 4; // seconds per slide
+  let elapsed = cycleTime;
+  let timerInterval;
 
-    /*** Start auto-scrolling every 3 seconds ***/
-    function startAutoScroll() {
-        interval = setInterval(() => {
-            elapsedTime++; 
-            updateElapsedTime();
-            if (elapsedTime >= 3) { 
-                index = (index + 1) % totalImages; 
-                updateCarousel();
-            }
-        }, 1000); // Update every second
-        resetProgressBar();
-    }
+  // Get DOM elements
+  const carouselImage = document.getElementById("carousel-image");
+  const counterEl = document.getElementById("carousel-counter");
+  const elapsedTimeEl = document.getElementById("elapsed-time");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  const progressFill = document.querySelector(".progress-fill");
 
-    /*** Stop auto-scrolling and restart when user interacts ***/
-    function resetScroll() {
-        clearInterval(interval); 
-        elapsedTime = 0; 
-        updateElapsedTime();
-        startAutoScroll(); 
-    }
+  // Update slide content
+  function updateSlide() {
+    const slide = slides[currentIndex];
+    carouselImage.src = slide.src;
+    carouselImage.alt = slide.alt;
+    counterEl.innerHTML = `${slide.counterText}<br>${slide.description}`;
+    elapsed = cycleTime;
+    updateElapsedTime();
+    resetProgressBar();
+  }
 
-    /*** Reset and restart the progress bar ***/
-    function resetProgressBar() {
-        progressFill.style.transition = "none"; 
-        progressFill.style.width = "0%"; 
-        setTimeout(() => {
-            progressFill.style.transition = "width 3s linear"; 
-            progressFill.style.width = "100%"; 
-        }, 10);
-    }
+  function updateElapsedTime() {
+    elapsedTimeEl.textContent = `Elapsed: ${elapsed}s`;
+  }
 
-    /*** Move backward when clicking the left button ***/
-    leftBtn.addEventListener("click", () => {
-        index = index > 0 ? index - 1 : totalImages - 1; 
-        soundRewind.currentTime = 0;
-        soundRewind.play(); 
-        updateCarousel(); 
-        resetScroll(); 
-    });
+  function startTimer() {
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      elapsed--;
+      updateElapsedTime();
+      if (elapsed <= 0) {
+        nextSlide();
+      }
+    }, 1000);
+    resetProgressBar();
+  }
 
-    /*** Move forward when clicking the right button ***/
-    rightBtn.addEventListener("click", () => {
-        index = (index + 1) % totalImages; 
-        soundAdvance.currentTime = 0; 
-        soundAdvance.play(); 
-        updateCarousel(); 
-        resetScroll(); 
-    });
+  function resetProgressBar() {
+    progressFill.style.transition = "none";
+    progressFill.style.width = "0%";
+    setTimeout(() => {
+      progressFill.style.transition = `width ${cycleTime}s linear`;
+      progressFill.style.width = "100%";
+    }, 10);
+  }
 
-    /*** Move images when clicking on the left or right side of an image ***/
-    carousel.addEventListener("click", (e) => {
-        const clickX = e.clientX - carousel.getBoundingClientRect().left; 
-        const halfWidth = carousel.offsetWidth / 2; 
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide();
+    startTimer();
+  }
 
-        if (clickX < halfWidth) { 
-            // If clicked on the left side, move backward
-            index = index > 0 ? index - 1 : totalImages - 1;
-            soundRewind.currentTime = 0;
-            soundRewind.play();
-        } else {
-            // If clicked on the right side, move forward
-            index = (index + 1) % totalImages;
-            soundAdvance.currentTime = 0;
-            soundAdvance.play();
-        }
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide();
+    startTimer();
+  }
 
-        updateCarousel(); // Move the images
-        resetScroll(); // Reset the auto-scroll timer
-    });
+  // Button event listeners
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+  });
 
-    /*** Make sure the carousel width matches the number of images ***/
-    carousel.style.width = `${totalImages * 100}%`; 
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+  });
 
-    /*** Start auto-scrolling when the page loads ***/
-    startAutoScroll();
+  // Initialize the slideshow
+  updateSlide();
+  startTimer();
 });
