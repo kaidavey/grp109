@@ -110,14 +110,7 @@ footer {
     border-radius: 10px;
 }
 
-/* Adjusted Button Styling */
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
+/* Adjusted Button Styling - Placed Together Under the Image */
 .carousel-btn {
     background-color: #00274C;
     color: white;
@@ -127,16 +120,28 @@ footer {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .carousel-btn:hover {
     background-color: #0055A4;
 }
 
+.left-btn {
+    left: -50px;
+}
+
+.right-btn {
+    right: -50px;
+}
+
 /* Move progress bar and elapsed time below image */
 .carousel-info {
     margin-top: 10px;
     text-align: center;
+    position: relative;
 }
 
 .progress-bar {
