@@ -1,7 +1,8 @@
 /* 
     Author: Katherine L
     Date: 03/07/25
-    Description: This CSS file styles the Resources page, ensuring consistency with Bellevue College's theme.
+    Description: Updated CSS file for the Resources page, including 
+    carousel improvements with smaller images and styled buttons.
 */
 
 /* Global Styling */
@@ -85,92 +86,69 @@ footer {
     color: #666;
 }
 
-/*  Carousel Styling Section */
-/* 
-    Author: Katherine L
-    Date: 03/14/25
-    Description: Styles the interactive image carousel, ensuring smooth scrolling and responsiveness.
-*/
+/*  Updated Carousel Styling */
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel");
-    const images = document.querySelectorAll(".carousel img");
-    const counter = document.querySelector(".carousel-counter");
-    const leftBtn = document.querySelector(".left-btn");
-    const rightBtn = document.querySelector(".right-btn");
-    const progressFill = document.querySelector(".progress-fill");
+.carousel {
+    max-width: 80%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
 
-    let index = 0;
-    let interval;
-    const totalImages = images.length;
-    
-    // Load sound files from GitHub raw URLs
-    const soundRewind = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/rewind.mp3");
-    const soundAdvance = new Audio("https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/sounds/advance.mp3");
+.carousel img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    border-radius: 10px; 
+}
 
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${index * 100}%)`;
-        counter.innerText = `Image ${index + 1}`;
-        resetProgressBar();
-    }
+/* Carousel Buttons Styling */
+.carousel-btn {
+    background-color: #00274C; /* Dark blue background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50%; /* Make it round */
+    position: absolute;
+}
 
-    function startAutoScroll() {
-        interval = setInterval(() => {
-            index = (index + 1) % totalImages;
-            updateCarousel();
-        }, 3000);
-        resetProgressBar();
-    }
+.carousel-btn:hover {
+    background-color: #0055A4; /* Lighter blue on hover */
+}
 
-    function resetScroll() {
-        clearInterval(interval);
-        startAutoScroll();
-    }
+.left-btn {
+    left: -40px;
+}
 
-    function resetProgressBar() {
-        progressFill.style.transition = "none";
-        progressFill.style.width = "0%";
-        setTimeout(() => {
-            progressFill.style.transition = "width 3s linear";
-            progressFill.style.width = "100%";
-        }, 10);
-    }
-
-    // Click Events for Buttons
-    leftBtn.addEventListener("click", () => {
-        index = index > 0 ? index - 1 : totalImages - 1;
-        soundRewind.currentTime = 0;
-        soundRewind.play();
-        updateCarousel();
-        resetScroll();
-    });
-
-    rightBtn.addEventListener("click", () => {
-        index = (index + 1) % totalImages;
-        soundAdvance.currentTime = 0;
-        soundAdvance.play();
-        updateCarousel();
-        resetScroll();
-    });
-
-    // Start auto-scrolling on page load
-    startAutoScroll();
-});
+.right-btn {
+    right: -40px;
+}
 
 /* Progress Bar */
 .progress-bar {
-  position: absolute;    
-  bottom: 0;             
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: #ccc;
-  z-index: 5;           
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+    z-index: 5;
 }
 
 .progress-fill {
-  width: 0%;
-  height: 100%;
-  background: #0055A4;
-  transition: width 3s linear;
+    width: 0%;
+    height: 100%;
+    background: #0055A4;
+    transition: width 3s linear;
 }
