@@ -7,7 +7,7 @@
 /* Full-width Navbar Fix */
 nav {
     background-color: #00274C; /* Bellevue College Dark Blue */
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
     position: fixed;
     width: 100vw; /* Ensure navbar spans the full width */
@@ -50,4 +50,14 @@ nav ul li a:hover {
 /* Fix for navbar overlapping content */
 body {
     padding-top: 60px; /* Ensures content is not hidden under navbar */
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    margin-top: 5px;
+    margin-left: 10px;
 }
