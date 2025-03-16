@@ -20,6 +20,7 @@
 /* Font Styling for Subtitles and Subtext */
 .footer-subtitle {
     font-size: 14pt;
+    font-weight: 500;
     color: white;
     text-align: left;
 }
