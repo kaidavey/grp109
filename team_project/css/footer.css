@@ -4,21 +4,19 @@
     Description: CSS styling for the upper and lower portions of the footer.
  */
 
-/* FOOTER STYLING by Kai D */
-/* Upper section of footer div */
+/* General settings: Upper/lower section of footer div */
 #upper {
     width: 100%;
     height: 200px;
     background-color: #002d65;
 }
-/* Lower section of footer div */
 #lower {
     width: 100%;
     height: 100px;
     background-color: white;
 }
 
-/* UPPER SECTION FOOTER STYLING by Kai D */
+/* Upper Footer Styling */
 /* Font Styling for Subtitles and Subtext */
 .footer-subtitle {
     font-size: 14pt;
@@ -114,8 +112,7 @@ form {
     background-color: #0055A4;
 }
 
-
-/* LOWER SECTION FOOTER STYLING by Kai D */
+/* Lower Footer Section */
 /* Footer Logo Styling */
 #footer-logo {
     float: left;

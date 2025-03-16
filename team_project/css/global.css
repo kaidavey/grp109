@@ -1,0 +1,60 @@
+/*
+    Author: Kai Davey
+    Date: 3/15/25
+    Description: In order to maintain consistent design across the site,
+    our group chose to create a global css file in order to change all font,
+    container, and footer settings in one place.
+ */
+
+/* General Settings */
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: url('../images/login-background.jpg') no-repeat fixed center;
+    background-size: cover;
+    color: #333;
+}
+
+/* Text Styling */
+h1 {
+    font-size: 24pt;
+    font-weight: 900;
+    color: #003366;
+}
+h2 {
+    font-size: 20pt;
+    font-weight: 800;
+    color: #0e5aa5;
+}
+/* Subheadings */
+h3 {
+    font-size: 16pt;
+    font-weight: 600;
+    color: #333;
+}
+p {
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+
+/* Main Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 50px auto;
+    border-radius: 30px;
+    padding: 20px;
+    width: 50%;
+    max-width: 800px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Footer Formatting */
+footer {
+    width: 100%;
+    text-align: center;
+}

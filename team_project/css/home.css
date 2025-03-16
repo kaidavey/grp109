@@ -1,72 +1,6 @@
-/* Global Styling */
-body {
-    padding: 0;
-    margin: 0;
-    font-family: 'RobotoRegular', sans-serif;
-    background: url('../images/login-background.jpg') no-repeat fixed center;
-    background-size: cover;
-    color: #333;
-}
-
-/* FREQUENTLY ASKED QUESTIONS STYLING by Kai D */
-#faq {
-    padding-bottom: 40px;
-}
-/* Dropdown Button Styling */
-.accordion-control {
-    display: block;
-    width: 80%;
-    padding: 15px;
-    margin-left: 5%;
-    font-size: 14pt;
-    text-align: left;
-    background-color: #002d65;
-    color: white;
-    border: 1px solid #618ae2;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.accordion-control:hover {
-    background-color: #0081FF;
-}
-/* Dropdown Content Styling */
-.accordion-item {
-    display: none;
-    margin-left: 5%;
-}
-/* Dropdown Arrow Styling */
-.drp-arrow {
-    object-fit: cover;
-    object-position: top;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    overflow: hidden;
-    vertical-align: middle;
-}
-
-/* FOOTER by Kai D. */
-/* Formatting */
-#footer {
-    width: 100%;
-    text-align: center;
-}
-
-/* OUTER CONTAINER STYLING by Kai D. */
-#mainContainer {
-    background: rgba(255, 255, 255, 0.9);
-    margin: 50px auto;
-    border-radius: 30px;
-    padding: 20px;
-    width: 50%;
-    max-width: 800px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-/* INNER CONTAINER STYLING by James Kim */
+/* Inner Container Styling by James Kim */
 /* Spacing between lines */
-#myContainer {
+#innerContainer {
     line-height: 1.6;
 }
 /* All images unified with height/width of 413px */
@@ -120,4 +54,47 @@ body {
 p.displaySlide{
     display: block;
     animation-duration: 1.5s;
+}
+
+/* Frequently Asked Questions Styling by Kai D */
+#faq {
+    padding-bottom: 40px;
+}
+/* Dropdown Button Styling */
+.accordion-control {
+    display: block;
+    width: 80%;
+    padding: 15px;
+    margin-left: 5%;
+    font-size: 14pt;
+    text-align: left;
+    background-color: #002d65;
+    color: white;
+    border: 1px solid #618ae2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.accordion-control:hover {
+    background-color: #0081FF;
+}
+/* Dropdown Content Styling */
+.accordion-item {
+    display: none;
+    margin-left: 5%;
+}
+/* Dropdown Arrow Styling */
+.drp-arrow {
+    object-fit: cover;
+    object-position: top;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/* Footer Formatting by Kai D. */
+/* Formatting */
+footer {
+    width: 100%;
 }
