@@ -10,9 +10,8 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'RobotoRegular', sans-serif;
-    background-image: url('../images/login-background.jpg'); /* Bellevue College background */
+    background: url('../images/login-background.jpg') no-repeat fixed center;
     background-size: cover;
-    background-position: center;
     color: #333;
 }
 

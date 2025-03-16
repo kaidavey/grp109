@@ -23,12 +23,16 @@
 .footer-subtitle {
     font-size: 14pt;
     color: white;
+    text-align: left;
 }
 .footer-subtext {
     text-decoration: none;
     width: max-content;
     font-size: 11pt;
     color: #0081FF;
+}
+p {
+    text-align: left;
 }
 .footer-subtext:hover {
     color: white;
@@ -41,6 +45,7 @@
     font-size: 11pt;
     color: white;
     line-height: 20px;
+    text-align: left;
 }
 /* Links Divs Formatting */
 #financials, #campus, #help {
@@ -73,6 +78,7 @@
     float: right;
     width: 40%;
     height: 100%;
+    text-align: left;
 }
 form {
     width: 100%;
