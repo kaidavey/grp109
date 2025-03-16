@@ -4,88 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="css/resources.css"> 
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/footer.css">
-
-    <!-- JavaScript Files -->
-    <script src="scripts/nav.js" defer></script>
-    <script src="scripts/carousel.js" defer></script>
-    <script src="scripts/footer.js" defer></script>
-</head>
-<body>
-    <!-- 
-    Author: Katherine L  
-    Date: 03/07/25
-    Description: This page includes a dynamically loaded navigation bar, created by me.  
-    The navigation bar is styled using `nav.css` and is inserted into all pages using `nav.js`.  
-    This ensures consistency across the site.  
--->
-
+    <link rel="stylesheet" href="css/resources.css">
+    <!--
+      Author: Katherine L
+      Date: 03/07/25
+      Description: This page includes a dynamically loaded navigation bar, created by me.
+      The navigation bar is styled using `nav.css` and is inserted into all pages using `nav.js`.
+      This ensures consistency across the site.
+	-->
     <!-- Link to Navigation CSS -->
     <link rel="stylesheet" href="css/nav.css">
-
-    <!-- Link to JavaScript  -->
-    <script src="scripts/nav.js" defer></script>
-
-    <!-- Navigation Bar  -->
-    <div id="nav-placeholder"></div>
-
-    <!-- 
+    <!--
+      Author: Kai D
+      Date: 3/15/25
+      Description: Dynamically load the footer user the same method as Katherine's navigation bar.
+    -->
+    <!-- Link to Footer CSS -->
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+<!--
     Author: Katherine L
     Date: 03/07/25
-    Description: This Resources page was created by Katherine to provide Bellevue College students 
-    with easy access to important documents, including the New Student Checklist and Campus Map. 
-    -->
-  <!-- Image Carousel Section -->
-    <div class="container">
-        <img src="images/Bulldog.png" alt="Bulldog Logo" class="logo">
-        <h1>Campus SnapShots</h1>
-
-<div class="carousel-container">
- <button id="prev-btn" class="carousel-btn left-btn">◀</button>
-            <div class="carousel">
-                <img id="carousel-image" src="images/CampusImage1.png" alt="Campus Image 1">
-            </div>
-            <button id="next-btn" class="carousel-btn right-btn">▶</button>
-            <div class="carousel-info">
-                <div id="carousel-counter" class="carousel-counter">Image 1 of 7</div>
-                <div id="elapsed-time" class="elapsed-time">Elapsed: 0s</div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
+    Description: This Resources page was created by Katherine to provide Bellevue College students
+    with easy access to important documents, including the New Student Checklist and Campus Map.
+-->
+<!-- Navigation Bar  -->
+<div id="nav-placeholder"></div>
+<!-- Image Carousel Section -->
+<div class="container">
+    <img src="images/Bulldog.png" alt="Bulldog Logo" class="logo">
+    <h1>Campus SnapShots</h1>
+    <div class="carousel-container">
+        <button id="prev-btn" class="carousel-btn left-btn">◀</button>
+        <div class="carousel">
+            <img id="carousel-image" src="images/CampusImage1.png" alt="Campus Image 1">
         </div>
-
-<!-- Link JavaScript file -->
-<script src="https://raw.githubusercontent.com/kaidavey/grp109/main/team_project/scripts/carousel.js"></script>
-        
-      <!-- PDF Section -->
-        <div class="pdf-container">
-            <h2>New Student Checklist</h2>
-            <embed src="docs/New-Student-Checklist.pdf" />
+        <button id="next-btn" class="carousel-btn right-btn">▶</button>
+        <div class="carousel-info">
+            <div id="carousel-counter" class="carousel-counter">Image 1 of 7</div>
+            <div id="elapsed-time" class="elapsed-time">Elapsed: 0s</div>
         </div>
-
-        <div class="pdf-container">
-            <h2>Campus Map</h2>
-            <embed src="docs/BCCampusMap.pdf" />
-        </div>
-
-        <!-- Important Links -->
-        <div class="links-section">
-            <h2>Important Links</h2>
-            <a href="https://www.bellevuecollege.edu/current-students/student-central/calendar/" target="_blank">
-                Academic Calendar
-            </a>
-            <a href="https://www.bellevuecollege.edu/maps-directions/main-campus-map/" target="_blank">
-                Campus Map
-            </a>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
         </div>
     </div>
-    <footer>
-        <div id="footer-placeholder"></div>
-    </footer>
+    <!-- PDF Section -->
+    <div class="pdf-container">
+        <h2>New Student Checklist</h2>
+        <embed src="docs/New-Student-Checklist.pdf" />
+    </div>
+    <div class="pdf-container">
+        <h2>Campus Map</h2>
+        <embed src="docs/BCCampusMap.pdf" />
+    </div>
+    <!-- Important Links -->
+    <div class="links-section">
+        <h2>Important Links</h2>
+        <a href="https://www.bellevuecollege.edu/current-students/student-central/calendar/" target="_blank">
+            Academic Calendar
+        </a>
+        <a href="https://www.bellevuecollege.edu/maps-directions/main-campus-map/" target="_blank">
+            Campus Map
+        </a>
+    </div>
+</div>
+<footer>
+    <div id="footer-placeholder"></div>
+</footer>
+<script src="scripts/nav.js" defer></script>
+<script src="scripts/carousel.js" defer></script>
+<script src="scripts/footer.js" defer></script>
 </body>
 </html>

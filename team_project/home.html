@@ -1,188 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="Welcome to the Bellevue College Accepted Student Portal!">
-  <title>Home</title>
-  <link rel="stylesheet" href="css/home.css" type="text/css">
-
-  <!-- 
-    Author: Katherine L  
-    Date: 03/07/25
-    Description: This page includes a dynamically loaded navigation bar, created by me.  
-    The navigation bar is styled using `nav.css` and is inserted into all pages using `nav.js`.  
-    This ensures consistency across the site.  
--->
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Welcome to the Bellevue College Accepted Student Portal!">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+    <!--
+      Author: Katherine L
+      Date: 03/07/25
+      Description: This page includes a dynamically loaded navigation bar, created by me.
+      The navigation bar is styled using `nav.css` and is inserted into all pages using `nav.js`.
+      This ensures consistency across the site.
+	-->
     <!-- Link to Navigation CSS -->
     <link rel="stylesheet" href="css/nav.css">
-
-    <!-- Link to JavaScript  -->
-    <script src="scripts/nav.js" defer></script>
-
     <!--
-        Author: Kai D
-        Date: 3/15/25
-        Description: Dynamically load the footer user the same method as Katherine's navigation bar.
+      Author: Kai D
+      Date: 3/15/25
+      Description: Dynamically load the footer user the same method as Katherine's navigation bar.
     -->
+    <!-- Link to Footer CSS -->
     <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
-<!-- Navigation Bar  -->
+<!-- Navigation Bar by Katherine L  -->
 <div id="nav-placeholder"></div>
- <div class="slider">
-  <div class="slides">
-    <h4 id="date">03/15/2025</h4>
-    <p class="slide">Katherine Luciano</p>
-    <p class="slide">James Kim</p>
-    <p class="slide">Kai Davey</p>
-  </div>
- </div>
-      <div id="mainContainer">
-      <div id="myContainer">
-      <div>
-         <h2>Paying for School</h2>
-         <img id="brokePerson" src="images/broke.jpg" alt="Broke Person">
-         <div id="financial1">
-            <p>Paying for school can be difficult. That's why Bellevue College offers budget-friendly paths to your dream degree.</p>
-            <a href="https://www.bellevuecollege.edu/admissions-aid/financial-aid/" target="_blank">Find Financial Aid Services</a>
-         </div>
-         <div>
-            <h3>Financial Office</h3>
-            <img id="uBuilding" src="images/UBuilding.png" alt="U Building">
+<div class="slider">
+    <div class="slides">
+        <h4 id="date">03/15/2025</h4>
+        <p class="slide">Katherine Luciano</p>
+        <p class="slide">James Kim</p>
+        <p class="slide">Kai Davey</p>
+    </div>
+</div>
+<div id="mainContainer">
+    <div id="myContainer">
+        <div>
+            <h2>Paying for School</h2>
+            <img id="brokePerson" src="images/broke.jpg" alt="Broke Person">
+            <div id="financial1">
+                <p>Paying for school can be difficult. That's why Bellevue College offers budget-friendly paths to your dream degree.</p>
+                <a href="https://www.bellevuecollege.edu/admissions-aid/financial-aid/" target="_blank">Find Financial Aid Services</a>
+            </div>
+            <div>
+                <h3>Financial Office</h3>
+                <img id="uBuilding" src="images/UBuilding.png" alt="U Building">
+                <ul class="listed">
+                    <li>Location: U Building - First Floor Lobby<br>
+                        (The closest parking lot is #4)
+                    </li>
+                    <li>
+                        Contact Info: (425)-270-8022 (press 2)
+                        <ul>
+                            <li>Monday - Fridays from 8:30 AM to 4 PM</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Service Hours:
+                        <ul>
+                            <li>Monday, Tuesday, Thursday, Friday from 8:30 AM to 5 PM</li>
+                            <li>Not available on Wednesdays</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>Financial Resources for Students</h3>
+            <p id="financial2">Paying for school doesn't have to be difficult. Here are some resources to help you.</p>
             <ul class="listed">
-               <li>Location: U Building - First Floor Lobby<br>
-                  (The closest parking lot is #4)
-               </li>
-               <li>
-                  Contact Info: (425)-270-8022 (press 2)
-                  <ul>
-                     <li>Monday - Fridays from 8:30 AM to 4 PM</li>
-                  </ul>
-               </li>
-               <li>
-                  Service Hours:
-                  <ul>
-                     <li>Monday, Tuesday, Thursday, Friday from 8:30 AM to 5 PM</li>
-                     <li>Not available on Wednesdays</li>
-                  </ul>
-               </li>
+                <li>
+                    <a href="https://www.bellevuecollege.edu/admissions-aid/financial-aid/" target="_blank">Explore Financial Aid</a>
+                </li>
+                <li>
+                    <a href="https://www.bellevuecollege.edu/foundation/scholarships/" target="_blank">Bellevue College Foundation Scholarships</a>
+                </li>
+                <li>
+                    <a href="https://www.bellevuecollege.edu/we/" target="_blank">Explore Workforce Education</a>
+                </li>
+                <li>
+                    <a href="https://www.bellevuecollege.edu/veterans/educationbenefits/" target="_blank">Explore Veterans' Benefits</a>
+                </li>
+                <li>
+                    <a href="https://www.bellevuecollege.edu/current-students/benefits-hub/seag/" target="_blank">Find Student Emergency Assistance</a>
+                </li>
             </ul>
-         </div>
-      </div>
-      <div>
-         <h3>Financial Resources for Students</h3>
-         <p id="financial2">Paying for school doesn't have to be difficult. Here are some resources to help you.</p>
-         <ul class="listed">
-            <li>
-               <a href="https://www.bellevuecollege.edu/admissions-aid/financial-aid/" target="_blank">Explore Financial Aid</a>
-            </li>
-            <li>
-               <a href="https://www.bellevuecollege.edu/foundation/scholarships/" target="_blank">Bellevue College Foundation Scholarships</a>
-            </li>
-            <li>
-               <a href="https://www.bellevuecollege.edu/we/" target="_blank">Explore Workforce Education</a>
-            </li>
-            <li>
-               <a href="https://www.bellevuecollege.edu/veterans/educationbenefits/" target="_blank">Explore Veterans' Benefits</a>
-            </li>
-            <li>
-               <a href="https://www.bellevuecollege.edu/current-students/benefits-hub/seag/" target="_blank">Find Student Emergency Assistance</a>
-            </li>
-         </ul>
-      </div>
-      <div>
-         <h2>Student Housing</h2>
-         <img id="housingPic1" src="images/housing_pic_1.jpg" alt="housing picture 1">
-         <div id="housing1">
-          <p>Bellevue College offers students the opportunity to live on campus.</p>
-          <p><a href="https://www.bellevuecollege.edu/student-life/campus-life/housing/apply-for-housing/" target="_blank">Apply for Housing</a></p>
-          <p>There are many different layouts for multiple needs. Check them out here.</p>
-          <p><a href="https://www.bellevuecollege.edu/student-life/campus-life/housing/rates/" target="_blank">Housing Layouts and Pricing</a></p>
-          <p>All of the following are included in the prices:</p>
-         </div>
-         <ul class="listed">
-            <li>All utilites: Water, electrity, heat, garbage and recycling</li>
-            <li>Internet: Wi-Fi and wired ethernet</li>
-            <li>Furnishing: All living units are fully furnished for your needs</li>
-            <li>Community places: Available throughout the building</li>
-            <li>Access to campus services: Public Safety (available 24/7). Events and programs geared by residents are included in the cost.</li>
-         </ul>
-         <p id="housing2">The following ARE NOT included in the price:</p>
-         <ul class="listed">
-            <li>Parking</li>
-            <li>Laundry: Facility is available on the ground floor but it is not free</li>
-            <li>Cable TV: Cable TV is not available in the building. Instead students are encouraged to use their own internet streaming services.</li>
-         </ul>
-      </div>
-      <div>
-         <h3>Housing for Students</h3>
-         <ul class="listed">
-            <li>Accodates up to 400 students.</li>
-            <li>Has plenty of community places to study, have meetings, and socialize!</li>
-            <li>
-               Built with substainabilty in mind with features like:
-               <ul>
-                  <li>Rain garden</li>
-                  <li>Smart water systems</li>
-                  <li>Utility monitoring</li>
-                  <li>Permeable pavements</li>
-                  <li>Abundant natural lighting</li>
-               </ul>
-            </li>
-         </ul>
-         <h3>Amenities include:</h3>
-         <ul class="listed">
-            <li>24/7 Housing staff coverage for all of your needs.</li>
-            <li>
-               Daily front desk services including:
-               <ul>
-                  <li>Mail and package services</li>
-                  <li>Equipment rentals</li>
-                  <li>Plus other resources</li>
-               </ul>
-            </li>
-            <li>Community places on each floor</li>
-            <li>On-site laundry facility</li>
-            <li>Wi-Fi access</li>
-            <li>On-campus food services</li>
-            <li>Free cultural, academic and community programs and events</li>
-            <li>Student volunteer and job opportunities</li>
-         </ul>
-         <h3>Location</h3>
-         <img id="hBuilding" src="images/HBuilding.png" alt="H Building">
-         <div id="housing3">
-          <h4>H Building</h4>
-          <p>The closest parking lots are #9 and #11.</p>
-          <h4>Mailing Address: </h4>
-          <p>3000 Landerholm Circle SE, Bellevue WA 98007</p>
-         </div>
-      </div>
-      </div>
+        </div>
+        <div>
+            <h2>Student Housing</h2>
+            <img id="housingPic1" src="images/housing_pic_1.jpg" alt="housing picture 1">
+            <div id="housing1">
+                <p>Bellevue College offers students the opportunity to live on campus.</p>
+                <p><a href="https://www.bellevuecollege.edu/student-life/campus-life/housing/apply-for-housing/" target="_blank">Apply for Housing</a></p>
+                <p>There are many different layouts for multiple needs. Check them out here.</p>
+                <p><a href="https://www.bellevuecollege.edu/student-life/campus-life/housing/rates/" target="_blank">Housing Layouts and Pricing</a></p>
+                <p>All of the following are included in the prices:</p>
+            </div>
+            <ul class="listed">
+                <li>All utilites: Water, electrity, heat, garbage and recycling</li>
+                <li>Internet: Wi-Fi and wired ethernet</li>
+                <li>Furnishing: All living units are fully furnished for your needs</li>
+                <li>Community places: Available throughout the building</li>
+                <li>Access to campus services: Public Safety (available 24/7). Events and programs geared by residents are included in the cost.</li>
+            </ul>
+            <p id="housing2">The following ARE NOT included in the price:</p>
+            <ul class="listed">
+                <li>Parking</li>
+                <li>Laundry: Facility is available on the ground floor but it is not free</li>
+                <li>Cable TV: Cable TV is not available in the building. Instead students are encouraged to use their own internet streaming services.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Housing for Students</h3>
+            <ul class="listed">
+                <li>Accodates up to 400 students.</li>
+                <li>Has plenty of community places to study, have meetings, and socialize!</li>
+                <li>
+                    Built with substainabilty in mind with features like:
+                    <ul>
+                        <li>Rain garden</li>
+                        <li>Smart water systems</li>
+                        <li>Utility monitoring</li>
+                        <li>Permeable pavements</li>
+                        <li>Abundant natural lighting</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Amenities include:</h3>
+            <ul class="listed">
+                <li>24/7 Housing staff coverage for all of your needs.</li>
+                <li>
+                    Daily front desk services including:
+                    <ul>
+                        <li>Mail and package services</li>
+                        <li>Equipment rentals</li>
+                        <li>Plus other resources</li>
+                    </ul>
+                </li>
+                <li>Community places on each floor</li>
+                <li>On-site laundry facility</li>
+                <li>Wi-Fi access</li>
+                <li>On-campus food services</li>
+                <li>Free cultural, academic and community programs and events</li>
+                <li>Student volunteer and job opportunities</li>
+            </ul>
+            <h3>Location</h3>
+            <img id="hBuilding" src="images/HBuilding.png" alt="H Building">
+            <div id="housing3">
+                <h4>H Building</h4>
+                <p>The closest parking lots are #9 and #11.</p>
+                <h4>Mailing Address: </h4>
+                <p>3000 Landerholm Circle SE, Bellevue WA 98007</p>
+            </div>
+        </div>
+    </div>
     <div id="content">
-      <div id="faq">
-        <h2 class="subtitle">Frequently Asked Questions</h2>
-        <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the student population?</button>
-        <div class="accordion-item">
-          <p>The total enrollment at Bellevue College in 2022, both undergraduate and graduate, is 10,617 students. The full-time enrollment at Bellevue College is 5,547 and the part-time enrollment is 5,070.</p>
+        <div id="faq">
+            <h2 class="subtitle">Frequently Asked Questions</h2>
+            <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the student population?</button>
+            <div class="accordion-item">
+                <p>The total enrollment at Bellevue College in 2022, both undergraduate and graduate, is 10,617 students. The full-time enrollment at Bellevue College is 5,547 and the part-time enrollment is 5,070.</p>
+            </div>
+            <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the average cost after aid?</button>
+            <div class="accordion-item">
+                <p>The average cost after aid is roughly $7,929. Aid includes grants and scholarships from the institution, state, and federal government.</p>
+            </div>
+            <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the acceptance rate?</button>
+            <div class="accordion-item">
+                <p>Bellevue College has a 100% acceptance rate, meaning that the college accepts all applicants. Bellevue College is an open admissions college.</p>
+            </div>
         </div>
-        <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the average cost after aid?</button>
-        <div class="accordion-item">
-          <p>The average cost after aid is roughly $7,929. Aid includes grants and scholarships from the institution, state, and federal government.</p>
-        </div>
-        <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the acceptance rate?</button>
-        <div class="accordion-item">
-          <p>Bellevue College has a 100% acceptance rate, meaning that the college accepts all applicants. Bellevue College is an open admissions college.</p>
-        </div>
-      </div>
     </div>
-    </div>
-    <footer>
-        <div id="footer-placeholder"></div>
-    </footer>
+</div>
+<footer>
+    <div id="footer-placeholder"></div>
+</footer>
 <script src="scripts/accordion.js"></script>
 <script src="scripts/slideNames.js"></script>
- <script src="scripts/footer.js" defer></script>
+<!-- Link to Nav JavaScript by Katherine L -->
+<script src="scripts/nav.js" defer></script>
+<!-- Link to Footer JavaScript by Kai D -->
+<script src="scripts/footer.js" defer></script>
 </body>
 </html>
