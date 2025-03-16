@@ -2,7 +2,7 @@
     Date: 2/21/25
     Description: Basic script to store user input and change messages to include user input.
     */
-function getUserInputs() { 
+function getUserInputs() {
     // Store username input
     var username = document.getElementById("username").value
     // Store useremail input
@@ -12,4 +12,4 @@ function getUserInputs() {
     document.getElementById("headerMsg").innerHTML = "We're Glad You're Here, " + username + "!"
     //Change welcome message and include username + useremail
     document.getElementById("welcomeMsg").innerHTML = "Congratulations and welcome to Bellevue College, " + username + "! Your email is " + useremail + ", so remember it because it's important!";
-  }
+}

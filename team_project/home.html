@@ -21,14 +21,16 @@
     <!-- Link to JavaScript  -->
     <script src="scripts/nav.js" defer></script>
 
-    <!-- Navigation Bar  -->
-    <div id="nav-placeholder"></div>
-  
+    <!--
+        Author: Kai D
+        Date: 3/15/25
+        Description: Dynamically load the footer user the same method as Katherine's navigation bar.
+    -->
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-<header>
-
-</header>
+<!-- Navigation Bar  -->
+<div id="nav-placeholder"></div>
  <div class="slider">
   <div class="slides">
     <h4>03/15/2025</h4>
@@ -158,75 +160,29 @@
          </div>
       </div>
       </div>
-<div id="content">
-  <div id="faq">
-    <h2 class="subtitle">Frequently Asked Questions</h2>
-    <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the student population?</button>
-    <div class="accordion-item">
-      <p>The total enrollment at Bellevue College in 2022, both undergraduate and graduate, is 10,617 students. The full-time enrollment at Bellevue College is 5,547 and the part-time enrollment is 5,070.</p>
+    <div id="content">
+      <div id="faq">
+        <h2 class="subtitle">Frequently Asked Questions</h2>
+        <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the student population?</button>
+        <div class="accordion-item">
+          <p>The total enrollment at Bellevue College in 2022, both undergraduate and graduate, is 10,617 students. The full-time enrollment at Bellevue College is 5,547 and the part-time enrollment is 5,070.</p>
+        </div>
+        <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the average cost after aid?</button>
+        <div class="accordion-item">
+          <p>The average cost after aid is roughly $7,929. Aid includes grants and scholarships from the institution, state, and federal government.</p>
+        </div>
+        <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the acceptance rate?</button>
+        <div class="accordion-item">
+          <p>Bellevue College has a 100% acceptance rate, meaning that the college accepts all applicants. Bellevue College is an open admissions college.</p>
+        </div>
+      </div>
     </div>
-    <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the average cost after aid?</button>
-    <div class="accordion-item">
-      <p>The average cost after aid is roughly $7,929. Aid includes grants and scholarships from the institution, state, and federal government.</p>
     </div>
-    <button class="accordion-control"><img src="images/icons/arrows.png" class="drp-arrow" alt="Dropdown Arrow">What is the acceptance rate?</button>
-    <div class="accordion-item">
-      <p>Bellevue College has a 100% acceptance rate, meaning that the college accepts all applicants. Bellevue College is an open admissions college.</p>
-    </div>
-  </div>
-</div>
-</div>
-<footer>
-  <div id="upper">
-    <div id="financials">
-      <h2 class="footer-subtitle">Financials</h2>
-      <p class="footer-subtext">Scholarships</p>
-      <p class="footer-subtext">Office</p>
-    </div>
-    <div id="campus">
-      <h2 class="footer-subtitle">Campus</h2>
-      <p class="footer-subtext">Map</p>
-      <p class="footer-subtext">Schedule</p>
-    </div>
-    <div id="help">
-      <h2 class="footer-subtitle">Need Help?</h2>
-      <p class="footer-subtext">Help Center</p>
-      <p class="footer-subtext">Terms of Use</p>
-    </div>
-    <div id="contact">
-      <img src="images/icons/location.png" class="comm" alt="Location Icon">
-      <p class="contact">
-        Bellevue College<br>
-        3000 Landerholm Circle SE<br>
-        Bellevue, WA 98007-6406<br>
-      </p>
-      <img src="images/icons/call.png" class="comm" alt="Phone Icon">
-      <p class="contact">(425) 564-1000</p>
-    </div>
-    <div id="newsletter">
-      <form>
-        <h2 class="footer-subtitle">Subscribe to Our Newsletter</h2>
-        <p>
-          <input type="email" id="email" name="email" aria-label="Email Address" placeholder="Email">
-        </p>
-        <p>
-          <input type="submit" id="submit" value="Sign Up">
-        </p>
-      </form>
-    </div>
-  </div>
-  <div id="lower">
-    <img src="images/bc-logo.png" alt="Bellevue College Logo" id="footer-logo">
-    <div id="socials">
-      <a href="https://youtube.com/bellevuecollege" target="_blank"><img src="images/icons/youtube.png" class="icons" alt="Youtube Logo"></a>
-      <a href="https://instagram.com/bellevuecollege" target="_blank"><img src="images/icons/insta.png" class="icons" alt="Instagram Logo"></a>
-      <a href="https://x.com/bellevuecollege" target="_blank"><img src="images/icons/x.png" class="icons" alt="X Logo"></a>
-      <a href="https://www.facebook.com/bellevuecollege" target="_blank"><img src="images/icons/facebook.png" class="icons" id="last-icon" alt="Facebook Logo"></a>
-      <p id="credits">Bellevue College Copyright &copy; 2025</p>
-    </div>
-  </div>
-</footer>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
 <script src="scripts/accordion.js"></script>
 <script src="scripts/slideNames.js"></script>
+ <script src="scripts/footer.js" defer></script>
 </body>
 </html>
