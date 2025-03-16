@@ -111,9 +111,13 @@ body {
     margin: 25px;
     overflow: hidden;
 }
+#date {
+    text-align: center;
+}
 .slider p{
     width: 100%;
     display: none;
+    text-align: center;
 }
 p.displaySlide{
     display: block;
