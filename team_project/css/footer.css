@@ -99,6 +99,7 @@ form {
 }
 /* Submit Button Styling */
 #submit {
+    display: block;
     width: 22%;
     height: 30px;
     background-color: #0081FF;
