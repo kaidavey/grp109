@@ -1,8 +1,4 @@
+/* Expand the White Content Container to fit the PowerPoints */
 .container {
     width: fit-content;
-}
-
-h2 {
-    text-align: left;
-    margin-left: 20px;
 }
