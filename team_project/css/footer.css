@@ -28,13 +28,14 @@
     text-decoration: none;
     width: max-content;
     font-size: 11pt;
-    color: #0081FF;
+    color: white;
 }
 p {
     text-align: left;
 }
 .footer-subtext:hover {
-    color: white;
+    text-decoration: underline;
+    color: #0081FF;
 }
 /* Special Font Styling for Location and Phone */
 .contact {
