@@ -1,0 +1,100 @@
+/* Inner Container Styling by James Kim */
+/* Spacing between lines */
+#innerContainer {
+    line-height: 1.6;
+}
+/* All images unified with height/width of 413px */
+#brokePerson {
+    height: 413px;
+    width: auto;
+}
+#uBuilding {
+    width: 413px;
+    height: auto;
+}
+/* Pushed lists to left for readablitiy */
+.listed {
+    text-align: left;
+}
+#housingPic1 {
+    width: 413px;
+    height: auto;
+}
+#hBuilding {
+    width: 413px;
+    height: auto;
+}
+
+/* Styling for carousel */
+.slides{
+    line-height: 50%;
+    margin-left: 5px;
+    border: 3px #000000;
+    width: 135px;
+    border-style: solid;
+    text-align: center;
+    background-color: white;
+}
+.slider{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    margin: 25px;
+    overflow: hidden;
+}
+#date {
+    text-align: center;
+}
+.slider p{
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+p.displaySlide{
+    display: block;
+    animation-duration: 1.5s;
+}
+
+/* Frequently Asked Questions Styling by Kai D */
+#faq {
+    padding-bottom: 40px;
+}
+/* Dropdown Button Styling */
+.accordion-control {
+    display: block;
+    width: 80%;
+    padding: 15px;
+    margin-left: 5%;
+    font-size: 14pt;
+    text-align: left;
+    background-color: #002d65;
+    color: white;
+    border: 1px solid #618ae2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.accordion-control:hover {
+    background-color: #0081FF;
+}
+/* Dropdown Content Styling */
+.accordion-item {
+    display: none;
+    margin-left: 5%;
+}
+/* Dropdown Arrow Styling */
+.drp-arrow {
+    object-fit: cover;
+    object-position: top;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/* Footer Formatting by Kai D. */
+/* Formatting */
+footer {
+    width: 100%;
+}

@@ -1,0 +1,56 @@
+/*
+    Author: Kai Davey
+    Date: 2/21/25
+    Description: Background, text panel, buttons, and form styling for the login page.
+*/
+
+/* Center Content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Added BC Logo Image to top of panel */
+#logo {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+/* Formatting for Input Text Fields */
+#username, #useremail {
+    width: 95%;
+    height: 40px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    border: none;
+    padding: 0 2.5%;
+}
+
+/* Styling for Placeholder Text inside Input Fields */
+#name::placeholder, #email::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for Submit Button */
+#submit {
+    width: 25%;
+    height: 35px;
+    background-color: #0055A4;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Styling for Submit Button when hovering */
+#submit:hover {
+    background-color: #003366;
+}
+
+/* Styling for Link to Iteration Page */
+#linktoH {
+    text-align: center;
+}

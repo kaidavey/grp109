@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Login to the Bellevue College Accepted Student Portal.">
+	<title>M10 - BC Portal Login</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" type="text/css">
+	<link rel="stylesheet" href="css/global.css" type="text/css">
+	<link rel="stylesheet" href="css/login.css" type="text/css">
+</head>
+<body>
+<!--
+	Author: Kai D
+	Date: 3/9/25
+	Description: Login page form for name and email. This is the first page users
+	will see when coming to our site. We will present a friendly welcome message
+	and a layout with nice, rounded corners that appeal to the eye.
+-->
+<!-- Invisible panel used for spacing -->
+<div class="spacingPanel"></div>
+<!-- Floating panel containing all Login Page info -->
+<div class="container">
+	<img id="logo" src="images/bc-logo.png" alt="Bellevue College Logo">
+	<h1 id="headerMsg">We're Glad You're Here!</h1>
+	<p id="welcomeMsg">
+		Please log in to access the Bellevue College Accepted Student Portal. Enter your full name and email below.
+	</p>
+	<!-- Form for text input -->
+	<form id="form">
+		<input type="text" id="username" name="uname" aria-label="Name" placeholder="Full Name"><br><br>
+		<input type="email" id="useremail" name="uemail" aria-label="Email" placeholder="Email"><br><br>
+		<div id="next"></div>
+		<button type="button" id="submit" onclick="getUserInputs(); newlink();">Log In</button><br><br>
+	</form>
+	<div id="linktoH"></div>
+	<hr>
+	<p id="helpPage">Visit our help page <a href="https://www.bellevuecollege.edu/admissions-aid/request-information/">here</a>.</p>
+	<p id="credits">Copyright &copy; 2025.</p>
+</div>
+<script src="scripts/userInput.js"></script>
+<script src="scripts/iterationLink.js"></script>
+</body>
+</html>

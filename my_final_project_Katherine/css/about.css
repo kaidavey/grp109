@@ -1,0 +1,18 @@
+/*
+    Author: Kai Davey
+    Date: 3/15/25
+    Description: Added styling for the 'Go to Change Log' button
+ */
+
+/* Change Log Button Styling */
+#log {
+    width: 22%;
+    height: 30px;
+    background-color: #0081FF;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}

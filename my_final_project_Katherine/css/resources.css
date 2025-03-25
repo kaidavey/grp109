@@ -1,0 +1,138 @@
+/* 
+    Author: Katherine L
+    Date: 03/07/25
+    Description: Updated CSS file for the Resources page, including 
+    carousel improvements with adjusted button placement and blinking effect on links.
+*/
+
+/* Bulldog Logo */
+.logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Links Section */
+.links-section {
+    margin-top: 20px;
+}
+
+.links-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.links-section a {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #0081FF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links-section a:hover {
+    color: #0055A4;
+}
+
+/* Blinking effect when hovered for 2 seconds */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.links-section a:hover {
+    animation: blink 1s infinite;
+    animation-delay: 2s; /* Start blinking after 2 seconds */
+}
+
+/* Embedded PDF Styling */
+.pdf-container {
+    margin-top: 20px;
+}
+
+embed {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 400px;
+}
+
+/* Updated Carousel Styling */
+.carousel-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.carousel {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Adjusted Button Styling - Placed Together Under the Image */
+.carousel-btn {
+    background-color: #00274C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-btn:hover {
+    background-color: #0055A4;
+}
+
+.left-btn {
+    left: -50px;
+}
+
+.right-btn {
+    right: -50px;
+}
+
+/* Move progress bar and elapsed time below image */
+.carousel-info {
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.progress-bar {
+    width: 350px;
+    height: 5px;
+    background: #ccc;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    background: #0055A4;
+    transition: width 3s linear;
+}
+
+.elapsed-time {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
