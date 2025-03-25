@@ -2,3 +2,8 @@
 .container {
     width: fit-content;
 }
+
+.name-header {
+    text-align: left;
+    margin-left: 20px;
+}
